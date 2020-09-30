@@ -16,7 +16,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y python3.6 python-requests unzip
 
     - name: 配置用户信息并检查有效性
-      run: echo '${{ secrets.biliconfig }}' > ./config/config.json && python3 check.py
+      run: echo '${{ secrets.BILICONFIG }}' > ./config/config.json && python3 check.py
       
     - name: 安装ServerlessFramework
       run: sudo npm install -g serverless
